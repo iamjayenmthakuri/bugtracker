@@ -3,7 +3,7 @@ export function bugAdded(description) {
   return {
     type: actions.BUG_ADDED,
     payload: {
-      description: "Bug1",
+      description,
     },
   };
 }
@@ -16,3 +16,12 @@ export function bugAdded(description) {
 //       },
 //     };
 //   };
+
+export const bugResolved = (id) => {
+  return {
+    type: actions.BUG_RESOLVED,
+    payload: {
+      id,
+    },
+  };
+};
